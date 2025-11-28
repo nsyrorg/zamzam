@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>أسعار شركة زمزم للصرافة والحوالات</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- لعرض هذه الصفحة كرابط عام، ضع هذا الملف مع باقي الملفات في مجلد واحد وارفعه إلى استضافة ملفات ثابتة، ثم استخدم الرابط الذي تعطيك إياه الاستضافة. -->
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    body {
+      background: #f5f5f3;
+      color: #222;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .shell {
+      width: 100%;
+      max-width: 430px;
+      padding: 10px;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 14px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+      padding: 10px 8px 8px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      max-height: calc(100vh - 20px);
+    }
+    .card-header {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      margin-bottom: 6px;
+    }
+    .title {
+      font-weight: 700;
+      font-size: 14px;
+      color: #1b4332;
+    }
+    .subtitle {
+      font-size: 11px;
+      color: #6c757d;
+    }
+    .meta {
+      font-size: 10px;
+      color: #888;
+      margin-top: 2px;
+    }
+    .sections {
+      flex: 1;
+      overflow-y: auto;
+      padding: 4px 2px 4px 2px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .section {
+      border-radius: 10px;
+      border: 1px solid #e0e2dd;
+      padding: 6px;
+      background: #fafaf9;
+    }
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+    .section-title {
+      font-size: 12px;
+      font-weight: 600;
+      color: #333;
+    }
+    .section-meta {
+      font-size: 10px;
+      color: #6c757d;
+      text-align: left;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11px;
+    }
+    th, td {
+      padding: 3px 4px;
+      border-bottom: 1px solid #eceee8;
+    }
+    th {
+      background: #f1f3f0;
+      font-weight: 600;
+      color: #444;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    .muted {
+      color: #777;
+      font-size: 10px;
+      margin-top: 2px;
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <div class="card">
+      <div class="card-header">
+        <div class="title">شركة زمزم للصرافة والحوالات</div>
+        <div class="subtitle">نشرة الأسعار وأجور الحوالات</div>
+        <div class="meta" id="global-meta">آخر تحديث: -</div>
+      </div>
+
+      <div class="sections">
+        <section class="section">
+          <div class="section-header">
+            <div class="section-title">أسعار سوق الحوالات (سوري)</div>
+            <div class="section-meta" id="meta-syria">آخر تعديل: -</div>
+          </div>
+          <table id="syria-table">
+            <thead>
+              <tr>
+                <th>المحافظة</th>
+                <th>شراء</th>
+                <th>مبيع</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <div class="section-title">أجور الحوالات</div>
+            <div class="section-meta" id="meta-fees">آخر تعديل: -</div>
+          </div>
+          <table id="fees-table">
+            <thead>
+              <tr>
+                <th>المحافظة</th>
+                <th>أجور % بالدولار</th>
+                <th>أجور % بالليرة السورية</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </section>
+
+        <section class="section">
+          <div class="section-header">
+            <div class="section-title">أسعار العملات العالمية مقابل الليرة السورية</div>
+            <div class="section-meta" id="meta-fx">آخر تعديل: -</div>
+          </div>
+          <table id="fx-table">
+            <thead>
+              <tr>
+                <th>العملة</th>
+                <th>شراء</th>
+                <th>مبيع</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+          <div class="muted">الأسعار تقريبية وخاضعة للتعديل المستمر من قبل الإدارة.</div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./js/public.js"></script>
+</body>
+</html>
+
